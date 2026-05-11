@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>✨ House Price Predictor</h2>
+
+    <form action="/predict" method="post">
+
+        <div class="row">
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="number" name="age" placeholder="Enter Age" required>
+            <input type="tel" name="contact" placeholder="Contact Number" required>
+        </div>
+
+        <div class="row">
+            <input type="number" name="area" placeholder="Area (sq ft)" required>
+            <input type="number" name="bhk" placeholder="BHK" required>
+            <input type="number" name="bathrooms" placeholder="Bathrooms" required>
+        </div>
+
+        <div class="row">
+            <input type="number" name="floors" placeholder="Floors" required>
+            <input type="number" name="parking" placeholder="Parking" required>
+
+            <select name="city" required>
+                <option value="">Select City</option>
+                <option>Pune</option>
+                <option>Mumbai</option>
+                <option>Bangalore</option>
+                <option>Hyderabad</option>
+                <option>Delhi</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <select name="house_type" required>
+                <option value="">House Type</option>
+                <option>Apartment</option>
+                <option>Villa</option>
+                <option>Penthouse</option>
+            </select>
+
+            <select name="furnishing" required>
+                <option value="">Furnishing</option>
+                <option>Furnished</option>
+                <option>Semi-Furnished</option>
+                <option>Unfurnished</option>
+            </select>
+        </div>
+
+        <button type="submit">Predict Price</button>
+
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+
+</div>
+
+</body>
+</html>

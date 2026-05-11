@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 🔥 Background auto change */
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: bgChange 15s infinite;
+}
+
+
+/* 👉 Images change here */
+
+@keyframes bgChange {
+    0% {
+        background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994");
+    }
+    33% {
+        background-image: url("https://images.unsplash.com/photo-1570129477492-45c003edd2be");
+    }
+    66% {
+        background-image: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+    }
+    100% {
+        background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994");
+    }
+}
+
+
+/* container */
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+/* title */
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+/* 🔥 ROW LAYOUT (MAIN FIX) */
+
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* inputs */
+
+input,
+select {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+/* button */
+
+button {
+    padding: 12px 25px;
+    background: orange;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+/* 🔥 hover effect */
+
+button:hover {
+    background: darkorange;
+    transform: scale(1.1);
+}
+
+
+/* result */
+
+h3 {
+    margin-top: 20px;
+    color: black;
+}
